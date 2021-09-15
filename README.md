@@ -2,7 +2,6 @@
 
 ```
 composer install
-php artisan passport:install
 ```
 
 #### Copy .env file
@@ -17,6 +16,12 @@ cp .env.example .env
 
 ```
 php artisan migrate --seed
+```
+
+#### Install Passport Key
+
+```
+php artisan passport:install
 ```
 
 #### Install NPM Dependencies
