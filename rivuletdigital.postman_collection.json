@@ -1,0 +1,365 @@
+{
+	"info": {
+		"_postman_id": "29165b71-0c82-4d2b-98dd-ed2a2df79f63",
+		"name": "rivuletdigital",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "Comments",
+					"item": [
+						{
+							"name": "Post Comments",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}posts/1/comments",
+									"host": [
+										"{{base_url}}posts"
+									],
+									"path": [
+										"1",
+										"comments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Comment",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "text",
+											"value": "this is comment from api",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}posts/1/comments",
+									"host": [
+										"{{base_url}}posts"
+									],
+									"path": [
+										"1",
+										"comments"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{accessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}posts",
+							"host": [
+								"{{base_url}}posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{accessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/suresh/Desktop/unnamed.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}posts",
+							"host": [
+								"{{base_url}}posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{accessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/suresh/Desktop/unnamed.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}posts",
+							"host": [
+								"{{base_url}}posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{accessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}posts/1",
+							"host": [
+								"{{base_url}}posts"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "ramani.suresh41@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "qswaefrd",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}login",
+					"host": [
+						"{{base_url}}login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "ramani.suresh41@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "asdasd",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}register",
+					"host": [
+						"{{base_url}}register"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8000/api/"
+		},
+		{
+			"key": "accessToken",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMWU2Yjk5NGIwYWM1YzQwYjZjYzM1OTJlNzM1ODdkMDdmMmZhMTg2ZWM3MTcxNjE1ZTZiNTA4M2ZlYmI1YTQ1ODI0Mzg5NTg5N2E5OTliM2YiLCJpYXQiOjE2MzE3ODMwMDguODkzNTgzLCJuYmYiOjE2MzE3ODMwMDguODkzNTg4LCJleHAiOjE2NjMzMTkwMDguODg3MTQ2LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.gcq_e_dOQpq4loD-MflC7iE1xVL5MrayVH-7vXSAd0YlDgsG4_CWAEz-FrntxQ_UumJfzn2ZASACsuDOZnI8eabEinVypmjQ2gY3ZtjB0pXpCf7k4NQIGtkD1dZsPxkexSAHcVqRdSTwG5JkNPwI6Uz4JGKHD1BFOULIkv67y8-A2lEbY_AVj70EI8lgkKgEnFghg1REWBZWzRMId7nxj9HwuwZTLL1nkoywRYEfxrQktxE7DknogBLQSB3Lpi00ICAXTFcWcZRn_4HvMYBAhoiDdtmyDzKYvslxHGpcgtV57Fvxbo4Q6keXsrhdw-kPIuz42VXdLzwIDUbHmOAbHZ8IoZkK6bviAd5-70_20kuTi7FproZp6YXAonZYJGDjKQ5czuTjI8JbQKWbyHvCBGN2mxvaSrVxfgP1aLNBbz16ndsVlPPt4G5WTIU3-kJGNSQZORBfaQXOIL-j0M2p4leKYGIhS9HqPGAZ1cIA8k2pfOaB1N9Oz21HnxaQPWJ2onSi5TucdGNiO7mfBhGl1xBl4qdVSXy6KfBOhmkQ7oUM6aduV8LEpAFs8Y9Dr5mhgwrd5KsbBdfgNXbgT-e2vX3b1R7AYiNlp0GN24rff25KYyDJuT5uEEE0Hx0W6Mkg1C7tYTgmwOK620YmeU-xf3Kgs2PBkUpmbQvPsekQ4hc"
+		}
+	]
+}
