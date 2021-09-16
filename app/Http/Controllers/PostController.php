@@ -18,8 +18,8 @@ class PostController extends Controller
      */
     public function index(Request $request)
     {
-        if($request->ajax() && $request->expectsJson()){
-            $posts = Post::withCount('comments')->get();
+        if($request->expectsJson()){
+            $posts = Post::select('id','title','image','user_id')->withCount('comments')->get();
             $posts->map(function($post){
                 $post->canEdit = $post->user_id == \Auth()->id();
                 return $post;
