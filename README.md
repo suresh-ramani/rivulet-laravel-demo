@@ -2,6 +2,7 @@
 
 ```
 composer install
+php artisan storage:link
 ```
 
 #### Copy .env file
